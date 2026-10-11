@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stylus drawing a wave. 108x108 adaptive-icon canvas; everything stays inside the 66dp safe zone.
+     pc/make_icon.py draws the same shapes for the Windows icon: keep the two in sync. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M37,71 C42,65 48,65 53,71 C58,77 64,77 69,71"
+        android:strokeColor="#4FC3F7"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round" />
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="45">
+        <path android:fillColor="#4FC3F7" android:pathData="M48,26 H60 V34 H48 Z" />
+        <path android:fillColor="#F2F4F8" android:pathData="M48,34 H60 V64 H48 Z" />
+        <path android:fillColor="#C7CDD6" android:pathData="M48,64 H60 L54,78 Z" />
+        <path android:fillColor="#4FC3F7" android:pathData="M51.4,72 H56.6 L54,78 Z" />
+    </group>
+</vector>

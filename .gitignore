@@ -1,0 +1,23 @@
+# Build output (contains absolute local paths).
+# Only the two finished binaries are committed, so people can use PenPad without building it.
+android/build/*
+!android/build/penpad.apk
+pc/build/
+pc/dist/*
+!pc/dist/PenPad.exe
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Signing key: build.bat creates one per machine. Keep your own copy outside git.
+*.keystore
+*.jks
+
+# Local editor / tool settings
+.claude/settings.local.json
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
