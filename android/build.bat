@@ -1,6 +1,6 @@
 @echo off
 rem PenPad build without Gradle or Android Studio.
-rem   build.bat           -> build\penpad.apk
+rem   build.bat           -> build\PenPad.apk
 rem   build.bat install   -> also installs on the USB-connected phone and sets up adb reverse
 setlocal
 cd /d "%~dp0"
@@ -75,16 +75,16 @@ if errorlevel 1 goto :fail
 
 echo [7/7] Signing
 call "%BT%\apksigner.bat" sign --ks debug.keystore --ks-pass pass:android --key-pass pass:android ^
-    --out build\penpad.apk build\aligned.apk
+    --out build\PenPad.apk build\aligned.apk
 if errorlevel 1 goto :fail
 
 echo.
-echo Built build\penpad.apk
+echo Built build\PenPad.apk
 
 if /i not "%~1"=="install" exit /b 0
 
 echo Installing on phone
-"%ANDROID_HOME%\platform-tools\adb.exe" install -r build\penpad.apk
+"%ANDROID_HOME%\platform-tools\adb.exe" install -r build\PenPad.apk
 if errorlevel 1 goto :fail
 "%ANDROID_HOME%\platform-tools\adb.exe" reverse tcp:47300 tcp:47300
 if errorlevel 1 goto :fail

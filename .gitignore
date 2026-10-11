@@ -1,7 +1,7 @@
 # Build output (contains absolute local paths).
 # Only the two finished binaries are committed, so people can use PenPad without building it.
 android/build/*
-!android/build/penpad.apk
+!android/build/PenPad.apk
 pc/build/
 pc/dist/*
 !pc/dist/PenPad.exe

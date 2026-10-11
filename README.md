@@ -19,7 +19,7 @@ penpad/
 
 Requirements: Windows 10 or 11, [uv](https://docs.astral.sh/uv/) (runs Python), an Android 11+ phone with an **active** stylus (S Pen, USI pen and similar). Passive rubber-tip styluses register as fingers and are ignored.
 
-**Just want to use it?** The prebuilt files are in this repo: [`pc/dist/PenPad.exe`](pc/dist/PenPad.exe) and [`android/build/penpad.apk`](android/build/penpad.apk). You don't need the SDK, Python or uv; follow [Share PenPad](#share-penpad). The setup below is only for building PenPad yourself.
+**Just want to use it?** The prebuilt files are in this repo: [`pc/dist/PenPad.exe`](pc/dist/PenPad.exe) and [`android/build/PenPad.apk`](android/build/PenPad.apk). You don't need the SDK, Python or uv; follow [Share PenPad](#share-penpad). The setup below is only for building PenPad yourself.
 
 ---
 
@@ -89,7 +89,7 @@ cd android
 .\build.bat install
 ```
 
-This builds `build\penpad.apk`, installs it, and sets up the USB tunnel (`adb reverse`). The first run also creates `debug.keystore`. Keep that file: Android refuses updates signed with a different key. If you lose it, uninstall PenPad from the phone first.
+This builds `build\PenPad.apk`, installs it, and sets up the USB tunnel (`adb reverse`). The first run also creates `debug.keystore`. Keep that file: Android refuses updates signed with a different key. If you lose it, uninstall PenPad from the phone first.
 
 `.\build.bat` with no argument builds only. The `.\` is required in PowerShell (the default VS Code terminal) and harmless in cmd.
 
@@ -193,7 +193,7 @@ To change the icon, edit `make_icon.py` (and `android\res\drawable\ic_launcher_f
 
 ## Share PenPad
 
-Send two files: `pc\dist\PenPad.exe` and `android\build\penpad.apk`. The other person needs no SDK, Python or uv, only:
+Send two files: `pc\dist\PenPad.exe` and `android\build\PenPad.apk`. The other person needs no SDK, Python or uv, only:
 
 1. An Android 11+ phone with an active stylus (see Requirements).
 2. On the phone: open the APK and allow installing apps from that source when asked. Play Protect may warn about an unknown app; choose to install anyway.
